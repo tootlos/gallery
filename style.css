@@ -5,98 +5,105 @@
 }
 
 body {
+    padding: 50px 0;
+}
+
+.main {
     font-family: 'StratosSkyeng', sans-serif;
-    background-color: #0F0804;
+    background-color: #D6D3CA;
+    width: 1200px;
+    padding: 400px 40px;
+    margin: 0;
+    box-shadow: 1px 1px 5px 1px grey;
 }
 
 .header {
-    height: 100vh;
-    background-image: url(images/13.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    margin-bottom: 42px;
+    border-top: 4px solid black;
+    border-bottom: 4px solid black;
+    text-align: right;
 }
 
-.header__overlay {
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0.50) 80.49%, #0F0804 100%);
-    height: 100%;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
+.header-date {
+    text-align: right;
+    font-size: 36px;
 }
 
-.header__title {
-    margin: auto;
+.header-title {
     font-size: 96px;
+    font-style: italic;
+    text-transform: uppercase;
     text-align: center;
-    color: white;
-    max-width: 658px;
-    font-weight: 400;
+    margin-bottom: 42px;
 }
 
-.header__link {
-    height: 90px;
-    width: 100%;
-    background: rgba(255, 255, 255, 0.17);
-    backdrop-filter: blur(11.5px);
+.content {
+    border: 4px solid black;
+    margin-bottom: 37px;
+    padding: 30px 30px;
+    padding-left: 51px;
+    padding-right: 51px;
 }
 
-.header__link:hover {
-    opacity: .8;
+.content-title {
+    font-size: 64px;
+    font-style: italic;
+    text-align: center;
+
 }
 
-.header__anchor {
-    text-decoration: none;
-    color: white;
+.content-table {
+    vertical-align: top;
+}
+
+.table-row {
+    vertical-align: top;
+}
+
+.table-data {
+    padding-right: 27px;
+}
+
+.table-data-text,
+.table-data-text-last {
     font-size: 24px;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    text-align: left;
 }
 
-.gallery {
-    /* Выключает точки у списка */
+.table-data-text {
+    margin-bottom: 41px;
+}
+
+
+img {
+    width: 483px;
+    height: 550px;
+}
+
+.advert-title {
+    font-family: 36px;
+    font-style: italic;
+    text-align: center;
+    border: 4px solid black;
+    border-left: 0;
+    border-right: 0;
+    font-size: 20px;
+}
+
+.adverts {
     list-style-type: none;
-    margin: 173px auto;
-
-    max-width: 1060px;
-    display: flex;
-    flex-wrap: wrap;
-
-    justify-content: center;
-    gap: 35px;
-}
- 
-
-.gallery__item {
-    max-width: 330px;
-
+    margin-top: 20px;
+    text-align: left;
 }
 
-.image {
-    width: 100%;
-    
+.advert-item {
+    display: inline-block;
+    vertical-align: top;
+    width: 347px;
+    margin-right: 22px;
 }
 
-.footer {
-    height: 100vh;
-    background-image: url(./images/7.png);
-    background-position: left;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.footer__overlay {
-    display: flex;
-    height: 100%;
-    width: 100%;
-    background: linear-gradient(180deg, #0F0804 0%, rgba(0, 0, 0, 0.6) 100%);
-}
-
-.footer__text {
-    margin: auto;
-    font-size: 40px;
-    color: white;
+/* :last-of-type - это псевдокласс, который выбирает самый последний элемент из всех элементов одного типа (соседних) */
+.advert-item:last-of-type {
+    margin-right: 0;
 }
