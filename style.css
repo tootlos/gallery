@@ -57,28 +57,93 @@ body {
 }
 
 .gallery {
-    /* Выключает точки у списка */
     list-style-type: none;
     margin: 173px auto;
 
-    max-width: 1060px;
     display: flex;
-    flex-wrap: wrap;
+    max-width: 1060px;
     justify-content: center;
+    flex-wrap: wrap;
     gap: 35px;
 }
- 
 
 .gallery__item {
     max-width: 330px;
-    position: relative;
-
+    position: relative; 
+    display: flex;
+    justify-content: center;
+    align-items: center;   
 }
+
+
+.image__title {
+    max-width: 260px;
+    position: absolute;
+    font-size: 24px;
+    text-align: center;
+    color:white;
+    z-index: 1;
+    display: none;
+}
+
+.gallery__item::after{
+    content: "";
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.65);
+    width: 100%;
+    height: 100%;
+    color: white;
+    display: none;
+}
+
+
+.gallery__item:hover::after,
+.gallery__item:hover .image__title{
+    display: block;
+}
+
 
 .image {
     width: 100%;
-    
 }
+
+.image__buttons {
+    position: absolute;
+    right: 27px;
+    bottom: 24px;
+    display: flex;
+    gap: 21px;
+    z-index: 5;
+}
+
+.image__button {
+    border: none;
+    background-color: transparent;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 32px;
+    cursor: pointer;
+}
+
+.image__like {
+    width: 39px;
+    background-image: url(./images/Like.svg);
+}
+
+.image__like:hover {
+    background-image: url(./images/Like_active.svg);
+}
+
+.image__choosen {
+    width: 30px;
+    background-image: url(./images/Choosen.svg);
+}
+
+.image__choosen:hover {
+    background-image: url(./images/Choosen_active.svg);
+}
+
 
 .footer {
     height: 100vh;
@@ -91,7 +156,6 @@ body {
 .footer__overlay {
     display: flex;
     height: 100%;
-    width: 100%;
     background: linear-gradient(180deg, #0F0804 0%, rgba(0, 0, 0, 0.6) 100%);
 }
 
@@ -99,45 +163,4 @@ body {
     margin: auto;
     font-size: 40px;
     color: white;
-}
-
-
-.btn-container{
-    position: absolute; 
-    top: 415px; 
-    right: 30px;
-    display: flex;
-    gap: 10px; 
-}
-
-
-
-
-
-.like {
-    border: none;
-    background-color: transparent;
-    background-image: url(./images/Like.svg);
-    background-size: contain;
-    width: 38px;
-    height: 32px;
-    z-index: 1;
-}
-
-.like:hover {
-    background-image: url(./images/Like_active.svg);
-}
-
-.choosen {
-    border: none;
-    background-color: transparent;
-    background-image: url(./images/Choosen.svg);
-    background-size: contain;
-    width: 30px;
-    height: 32px;
-    z-index: 2;
-}
-
-.choosen:hover {
-    background-image: url(./images/Choosen_active.svg);
 }
